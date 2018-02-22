@@ -182,10 +182,6 @@ export const MODIFYUSERPASSWARD = 'user/pass/update'
  */
 export const GAINVERYCODE = 'user/code/get'
 /**
- * 获取图片验证码
- */
-export const GETVERIFY = 'user/getVerify'
-/**
  * 验证手机号
  */
 export const TELLCODENEW = 'user/code/ifbind'

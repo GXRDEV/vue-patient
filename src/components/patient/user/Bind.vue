@@ -7,16 +7,9 @@
               <span class="red-star">*</span>
           </div>
           <div class="flex getcode form-group relative">
-            <x-input title="图片码" placeholder="请输入图片码" class="flex_1" type="tel" :show-clear="false" v-model="form.picCode" label-width="5rem"></x-input>
-            <x-button style="width: 38%" @click.native="getImgCode">
-              <img :src="imgCode" />
-            </x-button>
-            <span class="red-star">*</span>
-          </div>
-          <div class="flex getcode form-group relative">
               <x-input title="验证码" placeholder="请输入验证码" class="flex_1" type="tel" :show-clear="false" v-model="form.code" label-width="5rem"></x-input>
               <x-button style="width: 38%"
-                    :disabled="tel || lock || !form.picCode" @click.native="getcode">
+                    :disabled="tel || lock" @click.native="getcode">
                     {{ lock ? timer : '获取验证码'}}
               </x-button>
               <span class="red-star">*</span>
@@ -24,7 +17,6 @@
           <div class="form-group">
               <x-input title="邀请码" v-model="form.invitCode" :show-clear="false" placeholder="请输入邀请码（非必填）" label-width="5rem"></x-input>
           </div>
-
           <x-button @click.native="bindto" :disabled="validate || islogin" type="primary" class="button">下一步</x-button>
       </section>
   </div>
@@ -33,7 +25,6 @@
     import { XButton, querystring, XInput } from 'vux'
     import { ValideTel } from '@plugins/api'
     import { Heading } from '@components/share'
-    import { FixedUrl } from '@plugins/ajax'
     export default{
         components: {
             XButton, Heading, XInput
@@ -43,16 +34,13 @@
                 form: {
                     tel: '',
                     code: '',
-                    picCode: '',
                     openid: this.$store.state.openid,
                     invitCode: localStorage.getItem('_cache_invitCode_') || ''
                 },
                 openid: this.$store.state.openid,
                 timer: 90,
                 islogin: false,
-                lock: false,
-                timestamp: +new Date(),
-                imgCode: ''
+                lock: false
             };
         },
         // 未关注公众号跳转
@@ -70,7 +58,6 @@
             this.$nextTick(() => {
                 document.querySelector('.weui-input').focus()
             })
-          this.getImgCode();
         },
         watch:{
             lock: function(n, o){
@@ -96,10 +83,6 @@
                     width: '10em'
                 })
             },
-            getImgCode(){
-                this.timestamp = +new Date()
-                this.imgCode = FixedUrl(this.$urls.GETVERIFY) + '?timestamp='+ this.timestamp
-            },
             bindto() {
                 this.islogin = true;
                 this.$http.post(this.$urls.TELLCODENEW, this.form, this).then(d => {
@@ -120,9 +103,7 @@
             getcode() {
                 this.lock = true;
                 this.$http.post( this.$urls.GAINVERYCODE, {
-                    telphone: this.form.tel,
-                    timestamp: this.timestamp,
-                    picCode: this.form.picCode
+                    telphone: this.form.tel
                 }, this).then( d => {
                     if(d.status == 'success'){
                         this.toast('验证码发送成功')

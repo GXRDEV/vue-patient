@@ -672,6 +672,36 @@
     "component": "../../components/patient/drugs/ShopCart.vue"
   },
   {
+    "describe": "绿通申请首页",
+    "path": "/greenapply",
+    "component": "../../components/patient/green/GreenApply"
+  },
+  {
+    "describe": "绿通-服务须知",
+    "path": "/servicenotice",
+    "component": "../../components/patient/green/ServiceNotice"
+  },
+  {
+    "describe": "面诊绿通详情",
+    "path": "/facedetail",
+    "component": "../../components/patient/green/FaceDetail"
+  },
+  {
+    "describe": "住院绿通详情",
+    "path": "/hosdetail",
+    "component": "../../components/patient/green/HosDetail"
+  },
+  {
+    "describe": "特殊科室名单",
+    "path": "/specialdep",
+    "component": "../../components/patient/green/SpecialDep"
+  },
+  {
+    "describe": "购买服务列表",
+    "path": "/buygreen",
+    "component": "../../components/patient/green/BuyGreen"
+  },
+  {
     "path": "/404",
     "component": "../../components/App.vue",
     "meta": {

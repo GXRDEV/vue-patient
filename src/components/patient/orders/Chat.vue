@@ -127,7 +127,7 @@
                 <texting v-show="!showSpeak" v-model="text" ref="texting"></texting>
             </form>
             <wx-choose-emj :show="chooseemj" @on-choose="fillEmj"></wx-choose-emj>
-            <div v-if="!canInput" class="absolute left top flex acenter jcenter tcenter bbox w100 h100 disabledModel">
+            <div v-if="!canInput" class="absolute left top flex acenter tcenter bbox w100 h100 disabledModel">
               您已连续输入6条了，请等待医生回复，或者赠送给医生一点小心意。
             </div>
         </footer>

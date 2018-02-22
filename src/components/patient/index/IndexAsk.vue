@@ -25,9 +25,9 @@
                     <router-link class="flex_1 doc" :to="`/privatedocserver?distCode=${gpsCode}`">
                         <img src="../../../assets/img/doc-server.png" class="w100">
                     </router-link>
-                    <a class="flex_1">
-                        <img src="../../../assets/img/gene-server.png" class="w100 grayImg">
-                    </a>
+                    <router-link to="/greenapply" class="flex_1">
+                        <img src="../../../assets/img/green-service.png" class="w100">
+                    </router-link>
                 </div>
             </section>
             <fast-buy-drug title="快速购药"></fast-buy-drug>

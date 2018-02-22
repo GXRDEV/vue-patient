@@ -21,9 +21,9 @@ module.exports = {
     // `npm run build --report`
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report,
-    target: 'https://weixin.ebaiyihui.com',  //https://develop.ebaiyihui.com:8443 // https://weixin.ebaiyihui.com
+    target: 'https://develop.ebaiyihui.com:8443',  //https://develop.ebaiyihui.com:8443 // https://weixin.ebaiyihui.com
     //target: 'http://localhost:8090',
-    appid: 'wx4ee3ae2857ad1e18' // wx4ee3ae2857ad1e18 : 佰医汇
+    appid: 'wx0369e0fca6790259' // wx4ee3ae2857ad1e18 : 佰医汇
   },
   dev: {
     appid: 'wx0369e0fca6790259', // 康信医疗

@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+dist/
+.externalToolBuilders/
+.settings/
+.svn/
+npm-debug.log
+yarn-error.log

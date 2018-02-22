@@ -1,0 +1,173 @@
+@main-color: #0086D1;
+@main-bg-color: #eee;
+@main-color-lower: #81C1E7;
+@main-color-lowerer: #E5F4FB;
+@warn-color: #F6AB00;
+@warn-color-lower: #FCF3CA;
+@error-color: #df0808;
+@gray-color: #aaa;
+@gray-color-lower: #ccc;
+@black-color-lower:#222;
+@body-margin: 1rem;
+@font-color: #878d99;
+@black-color: #000;
+
+.dflex(){ display: -ms-flexbox!important; display: -webkit-box!important; display: -webkit-flex!important; display: flex!important;}
+.dflex0(){ display: -ms-flexbox; display: -webkit-box; display: -webkit-flex; display: flex;}
+.flex(@w:0) {
+    -webkit-box-flex:@w; -ms-flex:@w; -webkit-flex:@w; flex:@w;
+}
+/* flex父元素上设置子元素水平方向对齐方式 */
+.justifyContent(@w: center) {
+    -ms-flex-pack: @w;
+    -webkit-box-pack: @w;
+    -webkit-justify-content: @w;
+            justify-content: @w;
+}
+/* flex父元素上设置子元素垂直方向对齐方式 */
+.alignItem(@w: center) {
+    -ms-flex-align: @w;
+    -webkit-box-align: @w;
+    -webkit-align-items: @w;
+            align-items: @w;
+}
+.alignItemSelf(@w: center) {
+    -ms-flex-item-align: @w;
+    -ms-grid-row-align: @w;
+    -webkit-align-self: @w;
+            align-self: @w;
+}
+.orderFlex(@w: 0) {
+    -ms-flex-order: @w;
+    -webkit-box-ordinal-group: @w;
+    -webkit-order: @w;
+            order: @w;
+}
+/* 模拟边框 */
+.setTopLine(@c: #C7C7C7, @w: 0.5, @s: solid) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px @s @c;
+    color: @c;
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleY(@w);
+        -ms-transform: scaleY(@w);
+            transform: scaleY(@w);
+}
+
+.setBottomLine(@c: #C7C7C7, @w: 0.5, @s: solid) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px @s @c;
+    color: @c;
+    -webkit-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+    -webkit-transform: scaleY(@w);
+        -ms-transform: scaleY(@w);
+            transform: scaleY(@w);
+}
+
+.setLeftLine(@c: #C7C7C7, @w: 0.5, @s: solid) {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px @s @c;
+    color: @c;
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: scaleX(@w);
+        -ms-transform: scaleX(@w);
+            transform: scaleX(@w);
+}
+
+.setRightLine(@c: #C7C7C7, @w: 0.5, @s: solid) {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px @s @c;
+    color: @c;
+    -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+    -webkit-transform: scaleX(@w);
+        -ms-transform: scaleX(@w);
+            transform: scaleX(@w);
+}
+
+/* 箭头 */
+._setArrow(@arrowsize, @borderColor, @borderWidth){
+    display: inline-block;
+    height: @arrowsize;
+    width: @arrowsize;
+    border-width: @borderWidth @borderWidth 0 0;
+    border-color: @borderColor;
+    border-style: solid;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor, @borderWidth) when (@direction = top) {
+    ._setArrow(@arrowsize, @borderColor, @borderWidth);
+    -webkit-transform: matrix(0.71,-0.71,0.71,0.71,0,0);;
+        -ms-transform: matrix(0.71,-0.71,0.71,0.71,0,0);;
+            transform: matrix(0.71,-0.71,0.71,0.71,0,0); // rotate(-45deg)
+}
+
+.setArrow(@direction, @arrowsize, @borderColor, @borderWidth) when (@direction = right) {
+    ._setArrow(@arrowsize, @borderColor, @borderWidth);
+    -webkit-transform: matrix(0.71,0.71,-0.71,0.71,0,0);;
+        -ms-transform: matrix(0.71,0.71,-0.71,0.71,0,0);;
+            transform: matrix(0.71,0.71,-0.71,0.71,0,0); // rotate(45deg);
+
+    position: relative;
+    top: -2px;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor, @borderWidth) when (@direction = down) {
+    ._setArrow(@arrowsize, @borderColor, @borderWidth);
+    -webkit-transform: matrix(-0.71,0.71,-0.71,-0.71,0,0);;
+        -ms-transform: matrix(-0.71,0.71,-0.71,-0.71,0,0);;
+            transform: matrix(-0.71,0.71,-0.71,-0.71,0,0); // rotate(135deg);
+
+    position: relative;
+    top: -3px;
+}
+
+.setArrow(@direction, @arrowsize, @borderColor, @borderWidth) when (@direction = left) {
+    ._setArrow(@arrowsize, @borderColor, @borderWidth);
+    -webkit-transform: matrix(-0.71,-0.71,0.71,-0.71,0,0);;
+        -ms-transform: matrix(-0.71,-0.71,0.71,-0.71,0,0);;
+            transform: matrix(-0.71,-0.71,0.71,-0.71,0,0); // rotate(-135deg);
+
+    position: relative;
+    top: -2px;
+}
+
+/* 多行文本加省略号 */
+.setMultEllipsis(@a: 2) {
+    display: -webkit-box;
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp: @a;
+}
+
+.backgroundSize(@a: cover) {
+    background: no-repeat center center ;
+    background-size: @a ;
+}

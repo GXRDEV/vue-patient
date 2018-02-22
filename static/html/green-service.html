@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>绿通服务</title>
+    <style>
+        body, html, div, i, p, span { margin:0; padding: 0; }
+        body { font-family:PingFangSC-Regular; }
+        .bbox { box-sizing: border-box; }
+        .ohidden { overflow: hidden;}
+        .redcolor { color: #ff6060; }
+        .bluecolor { color: #7aa0fa; }
+        .tcenter { text-align: center;}
+        .tleft { text-align: left; }
+        .tright { text-align: right; }
+        .margin-b { margin-bottom: .83rem; }
+        .flex { display: -ms-flexbox!important; display: -webkit-box!important; display: -webkit-flex!important; display: flex!important;}
+        .flex_1{ -webkit-box-flex:1; -ms-flex:1; -webkit-flex:1; flex:1; }
+        .md-font { font-size: 1.04rem; font-style: normal;}
+        .container { padding: 6.085rem 2.915rem 0; background: -webkit-linear-gradient(#FFF, #f1f8ff); position:relative;}
+        .green-banner { width: 100%;}
+        .title {
+            position: absolute; top: 2.625rem; left: 50%; display: block; width: 90%; transform: translateX(-50%);
+            background-image: url(../appimg/green-title.png); background-repeat: no-repeat; background-size: 100% 100%;
+        }
+        .title:after{ content: ""; display: block; padding: 14.2%;}
+        .price {
+            width: 90%; position: absolute; top: 11.6rem; font-size: 1.335rem; background: -webkit-linear-gradient(#ffeb67, #ffed76);
+            padding: .5rem 0; left:50%; transform: translateX(-50%); text-align: center; border-radius: 4rem;
+        }
+        .service { padding: 1.04rem 0 ;}
+        .service-title { font-family: PingFangSC-Medium; color: #333; font-size: 1.335rem; position: relative;}
+        .service-title:before, .service-title:after { display: block; content: ""; width: 3.335rem; height: 0.08rem; background: #afafaf; position: absolute; top: 50%; }
+        .service-title:after { right: 2.6rem; }
+        .service-title:before { left: 2.6rem; }
+        .face-with { margin-top: 2.08rem; position: relative; }
+        .face-with i { position: absolute; display:inline-block; width: .08rem; height: 5.415rem; background:#ddd; top:2px; right: -2px; }
+        .face-with img { width: 2.25rem; margin-bottom: .665rem;}
+        .face-with span { display: block; font-size: 1.085rem; color: #000;}
+        .face-with span:first-of-type { margin-bottom: .625rem; }
+        .face-with .item { font-size: 1rem; color: #7f7f7f!important; }
+        .advantage, .service-instr { margin-top: 2.71rem; }
+        .adva-item { font-size: 1.25rem; color: #555; font-family: PingFang SC; }
+        .adva-item span { display: block; }
+        .adva-item span:first-child { font-size: 1.335rem; color: #0b67ff; margin-bottom: .625rem; }
+        .adva-item .num { font-family: PingFangSC-Medium; font-style: normal; position: relative; border-bottom: .165rem solid #ffc669;}
+        .instr-item { padding: 2.75rem 1.5rem 3rem; font-size: 1.165rem; color: #555; font-family: PingFang SC;}
+        .instr-item-spe { padding: 2.75rem 1rem 3rem; }
+        .instr-item p:first-child { margin-bottom: 1.67rem; }
+        .instr-item p:first-child span { color: #3581FF; background: #fff499 ; padding: .5rem 1.4rem; border-radius: 4rem; }
+        .instr-item p:nth-child(2) { line-height: 2rem; }
+        .atten-item { padding: 0 2.5rem 3rem 3.75rem; font-size: 1.165rem; color: #666; position: relative;}
+        .atten-item p { line-height: 2rem; word-break:break-all;}
+        .atten-item p:first-of-type { font-size: 1.25rem!important; color: #333!important; }
+        .atten-item span { position:absolute; left: 1.5rem; top: .5rem; color: #0B67FF; border-left: .25rem solid #0B67FF; line-height: 1;padding-left: .5rem;}
+        .abstyle { font-style: normal; color: #444; }
+        /*.apply { display:inline-block; color: #fff; background: #3581FF; font-size: 1.25rem; width: 12.5rem; height: 3.335rem; line-height: 3.335rem; border-radius: 4rem; text-decoration: none; margin-bottom: 3rem; }*/
+        .logo { margin-bottom: 2.5rem; position: relative; }
+        .logo:before, .logo:after { display: block; content: ""; width: 8.335rem; height: 0.085rem; background: #ddd; position: absolute; top: 50%; }
+        .logo:before { left: 1.5rem; }
+        .logo:after { right: 1.5rem; }
+    </style>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div class="container bbox">
+        <i class="title"></i>
+        <p class="price bluecolor">挂号(预约专家) <span class="redcolor">200<i class="md-font">元起</i></span>&nbsp;&nbsp;陪诊服务 <span class="redcolor">300<i class="md-font">元起</i></span></p>
+        <img src="../appimg/green-banner.png" class="green-banner">
+    </div>
+    <div class="service bbox ohidden">
+        <p class="tcenter service-title">佰医汇北上广就医绿通服务</p>
+        <p class="flex">
+            <span class="flex_1 tcenter face-with">
+                <img src="../appimg/green-with.png">
+                <span>陪诊服务</span>
+                <span class="item">专人全程陪同就医</span>
+            </span>
+            <span class="flex_1 tcenter face-with">
+                <img src="../appimg/green-face.png">
+                <span>面诊绿通</span>
+                <span class="item">快速挂号名院专家</span>
+            </span>
+        </p>
+        <p class="flex">
+            <span class="flex_1 tcenter face-with">
+                <i></i>
+                <img src="../appimg/green-check.png">
+                <span>检查绿通</span>
+                <span class="item">项目检查加急服务</span>
+            </span>
+            <span class="flex_1 tcenter face-with">
+                <i></i>
+                <img src="../appimg/green-hos.png">
+                <span>住院绿通</span>
+                <span class="item">北上广名院转院快</span>
+            </span>
+            <span class="flex_1 tcenter face-with">
+                <img src="../appimg/green-operation.png">
+                <span>预约手术</span>
+                <span class="item">预约名院专家手术</span>
+            </span>
+        </p>
+    </div>
+    <div class="advantage bbox ohidden">
+        <p class="tcenter service-title">北上广就医绿通服务优势</p>
+        <p class="flex bbox" style="padding:2.7rem 2rem 0;">
+            <span class="flex_1 tleft adva-item">
+                <span><i class="num">01</i></span>
+                <span class="margin-b">快速就医、节省时间</span>
+                <span>不耽误病情治疗</span>
+            </span>
+            <span class="flex_1 tright adva-item">
+                <span><i class="num">02</i></span>
+                <span class="margin-b">全程陪诊、简化流程</span>
+                <span>保证高效就医</span>
+            </span>
+        </p>
+        <p class="tcenter">
+            <img src="../appimg/green-time.png" style="width: 10.5rem; height: 10.75rem; margin: .83rem 0 1rem;">
+        </p>
+        <p class="tcenter adva-item">
+            <span><i class="num">03</i></span>
+            <span class="margin-b">指定专家、指定科室、指定时间</span>
+            <span>保证最好的就医服务</span>
+        </p>
+    </div>
+    <div class="service-instr bbox ohidden">
+        <p class="tcenter service-title">北上广就医绿通服务介绍</p>
+        <div class="instr-item">
+            <p class="tcenter">
+                <span>陪诊服务</span>
+            </p>
+            <p class="tcenter">专人全程陪同就医，包含诊前关怀、亲情式全程陪同代办服务（取号、缴费、取药）、协助就诊、协助检查以及后续疾病跟踪咨询等一站式服务</p>
+        </div>
+        <div class="instr-item instr-item-spe">
+            <p class="tcenter">
+              <span>面诊绿通</span>
+            </p>
+            <p class="tcenter">根据客户就医需求，提供上海、北京、广州等三级甲等医院的专家门诊（含特需门诊）预约挂号服务，包含常见疾病及重大疾病的相关专家门诊预约T</p>
+        </div>
+        <div class="instr-item">
+            <p class="tcenter"><span>检查绿通</span></p>
+            <p class="tcenter">根据预约医院需要做的检查项目安排快速检查，时刻跟进，优化流程，节省时间，不耽误病情治疗</p>
+        </div>
+        <div class="instr-item">
+            <p class="tcenter"><span>住院绿通</span></p>
+            <p class="tcenter">在客户需要住院治疗且看诊专家已开具入院单后，为客户住院期间提供的服务。内容包括：床位协调、出入院手续协办，住院探访，并及时了解被保障成员病情动态，提供与住院相关的问题咨询</p>
+        </div>
+        <div class="instr-item instr-item-spe">
+            <p class="tcenter"><span>预约手术</span></p>
+            <p class="tcenter">根据客户就医需求，提供上海、北京、广州等三级甲等医院的手术（含特需门诊）预约服务，安全高效</p>
+        </div>
+    </div>
+    <div class="attention bbox">
+        <p class="tcenter service-title" style="margin-bottom: 1.67rem;">绿通服务流程及注意事项</p>
+        <div class="atten-item">
+            <span>1.</span>
+            <p>咨询准备</p>
+            <p>有意向请提前电话沟通客服专员，专线电话为: 400-631-9377（时间为工作时间早9:00--17:00）特殊时段或者特殊情况可电话18311267361安排处理，半小时内确定安排是否可安排业务，确定后请提交业务申请信息表。</p>
+        </div>
+        <div class="atten-item">
+            <span>2.</span>
+            <p>提交申请</p>
+            <p>申请表发送 kefu@ebaiyihui.com, 负责人收到业务申请表以后，2小时内，我司客服专员会与客户电话联系，核对客户信息，告知需要的就医资料和证件，根据需要提供的具体业务，按时间安排服务。</p>
+        </div>
+        <div class="atten-item">
+            <span>3.</span>
+            <p>确认下单</p>
+            <p>如果您选择的就诊日期，医生停诊或者其他原因无法完成就医预约，我们会第一时间跟您协商最近的就诊日期。</p>
+        </div>
+        <div class="atten-item">
+            <span>4.</span>
+            <p>门诊预约</p>
+            <p>完成约定面诊时间后，客服专员会电话告知客户。</p>
+        </div>
+        <div class="atten-item">
+            <span>5.</span>
+            <p>医院就诊</p>
+            <p>就医安排成功后，就医专员再次致电患者，安排就诊交接，就诊服务分为两种情况：</p>
+            <p>
+                <i class="abstyle">A、需要陪诊：</i>
+                陪诊专员在约定地点跟患者见面陪同患者完成就医全程（4个小时），包括陪同候诊当次取结果，取药等，如须延长陪诊时间需要另行收费。
+            </p>
+            <p>
+                <i class="abstyle">B、患者自行就诊：</i>
+              提供轻陪诊，陪诊专员在约定地点跟患者见面，把证件和就诊号条交接给患者，带患者到诊室门口，患者自行就医，服务结束。
+            </p>
+        </div>
+        <div class="atten-item">
+            <span>6.</span>
+            <p>服务追踪</p>
+            <p>完成面诊以后，客服回访客户，了解整个服务质量，每月底反馈给客户渠道。</p>
+        </div>
+    </div>
+    <!--<p class="tcenter"><a href="tel:400-631-9377" class="apply">立即申请</a></p>-->
+    <p class="tcenter logo">
+        <img src="../appimg/zjh-logo.png" style="width: 7rem;">
+    </p>
+</body>
+</html>

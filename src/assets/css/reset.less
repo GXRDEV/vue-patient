@@ -1,0 +1,105 @@
+@import './var';
+
+html {
+    color:#000;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    font-family: Helvetica;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a:link,a:visited,a:hover,a:active{
+    text-decoration:none;
+}
+a img {
+  border: 0;
+}
+input,select,textarea{
+    font-size: inherit;
+    font-family: inherit;
+}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.scroll{-webkit-overflow-scrolling:touch; overflow: auto; }
+.block{ display: block; }
+.inlineblock{ display: inline-block; }
+.whitespace{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bbox{ box-sizing: border-box; }
+.ohidden{ overflow: hidden; }
+.relative{ position: relative;}
+.absolute{position: absolute;}
+.fixed{position: fixed;}
+.top{top: 0;}
+.bottom{ bottom: 0;}
+.left{ left: 0;}
+.right{ right: 0;}
+.margin_bottom{ bottom: 2rem}
+.flex{ .dflex(); }
+.nopadding{ padding: 0 !important}
+.nomargin { margin: 0 !important}
+
+.flex_0{ .flex(); }
+.flex_1{ .flex(1); }
+.flex_11a{ .flex(1 1 atuo); }
+.flex_2{ .flex(2); }
+.flex_3{ .flex(3); }
+.flex_4{ .flex(4); }
+.flex_5{ .flex(5); }
+.flex_6{ .flex(6); }
+.flex_7{ .flex(7); }
+.flex_8{ .flex(8); }
+.flex_11{ .flex(11); }
+
+.shk0{ -ms-flex-negative:0; flex-shrink:0; -webkit-flex-shrink:0;}
+
+.row{ -ms-flex-direction:row; -webkit-box-orient:horizontal; -webkit-box-direction:normal; flex-direction:row; -webkit-flex-direction:row;}
+.column{ -ms-flex-direction:column; -webkit-box-orient:vertical; -webkit-box-direction:normal; flex-direction:column; -webkit-flex-direction:column;}
+.wrap{ -ms-flex-wrap:wrap; flex-wrap:wrap; -webkit-flex-wrap:wrap;}
+.nowrap{ -ms-flex-wrap:nowrap; flex-wrap:nowrap; -webkit-flex-wrap:nowrap;}
+.jcenter{ .justifyContent() }
+.jend{ .justifyContent(flex-end) }
+.acenter{ .alignItem() }
+.astretch{ .alignItem(stretch) }
+.aselfcenter{ .alignItemSelf() }
+
+.tcenter{ text-align: center;}
+.tright{ text-align: right;}
+.tleft{ text-align: left;}
+
+.fleft{ float: left; }
+.fright{ float: right; }
+.clearfix { *zoom:1 }
+.clearfix:after {
+    content:"";
+    visibility:hidden;
+    display:block;
+    height:0;
+    clear:both;
+}
+.clearfix { *position:relative; }
+
+.iconfont{font-size: 1em;}
+.h100{ height: 100%!important; }
+.h100vh{ height: 100vh!important; }
+.w100{ width: 100%!important; }
+.w100vw{ width: 100vw!important; }
+.bgcove{
+    .backgroundSize();
+}

@@ -1,0 +1,880 @@
+@import './var';
+body{ background: @main-bg-color;}
+.g_margin{ margin: 0 @body-margin; }
+.g_padding{ padding: 0 @body-margin; box-sizing: border-box; }
+.picker-item{ color: @gray-color-lower;}
+.fixedbottom{
+    height: 3.8rem;
+    .fixed{
+        padding: 1rem; box-sizing: border-box;
+        background: rgba(238, 238, 238, .8);
+    }
+    .nobg{
+        padding: 0;
+        background: rgba(238, 238, 238, 0);
+    }
+}
+.small{ font-size: 0.83rem; }
+.small11{ font-size: 0.92rem; }
+.small10{ font-size: 0.83rem}
+.small9{ font-size: 0.75rem; }
+.small8{ font-size: 0.667rem; }
+.base12{ font-size: 1rem; }
+.big{ font-size: 1.167rem; }
+.big12{ font-size: 1.077rem; }
+.big13{ font-size: 1.083rem; }
+.big14{ font-size: 1.167rem; }
+.big15{ font-size: 1.25rem; }
+.big16{ font-size: 1.33rem; }
+.big18{ font-size: 1.5rem; }
+.big19{ font-size: 1.583rem; }
+.big20{ font-size: 1.667rem; }
+.big21{ font-size: 1.75rem; }
+.strong{ font-weight: 600 }
+.pf-medium{ font-weight: 600;}
+.pf-regular{ font-weight: 400;}
+.pf-light{ font-weight: 200;}
+.gray{ color:@gray-color; }
+.blacklower{ color:@black-color-lower }
+.grayccc{ color:@gray-color-lower; }
+.maincolor{ color: @main-color; }
+.errorcolor{ color: @error-color;}
+.warncolor{ color: @warn-color;}
+.blackcolor{ color: @black-color;}
+.fff{ color: #fff; }
+.bgfff{ background: #fff; }
+.borderbox{ box-sizing: border-box; }
+.mtsplit{ margin-top: .62rem; }
+.whitespace2{
+    height: 3em; line-height: 1.5em; overflow: hidden;
+    label{ height: 1em; overflow: hidden; }
+}
+
+.app{
+    .weui-toast{
+        font-size: 1.33rem;
+        width: 8em; padding: 0 1em; box-sizing: border-box;
+        .weui-toast__content{
+            font-size: 1.33rem;
+        }
+    }
+    .weui-loading_toast{
+        .weui-toast{
+            font-size: 1.33rem;
+            height: 6.5em; min-height: 6.5em; top: 50%;
+            width: 7em; padding: 0 1em; box-sizing: border-box;
+                    -webkit-transform: translate(-50%, -80%);
+                        -ms-transform: translate(-50%, -80%);
+                            transform: translate(-50%, -80%);
+            .weui-icon_toast.weui-loading{ margin-top: 23px;}
+        }
+    }
+    .weui-btn {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+        box-sizing: border-box;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        line-height: 2.33333333;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        overflow: hidden;
+        font-size: 1.15rem;
+        border-radius: 0;
+        &:after{
+            border-radius: 0;
+            border: none
+        }
+        &.noborder{
+            border: 0;
+            &:after{
+                border: 0;
+            }
+        }
+    }
+    .weui-grid__label,
+    .weui-cells{
+        color: #222;
+        font-size: .92rem;
+        &:after,
+        &:before{
+            color: #eee;
+            border-color: #eee;
+        }
+    }
+    .weui-grid{
+        &:before,
+        &:after{
+            color: #eee;
+            border-color: #eee;
+        }
+    }
+    .weui-cell{
+        padding: .625rem @body-margin;
+        &:before{
+            left: @body-margin
+        }
+    }
+    .vux-cell-box{
+        &:before{
+            left: @body-margin
+        }
+    }
+    .weui-cell_access{
+        .weui-cell__ft{
+            font-size: 0.92rem;
+            color: #222;
+            padding-right: 0.9rem;
+            &:after{
+                border-width: 1px 1px 0 0;
+                margin-top: -3px;
+            }
+        }
+    }
+    .weui-btn_mini{ font-size: 1rem; }
+    .weui-btn_custom{
+        background-color: @gray-color;
+        border-color: @gray-color;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.33rem;
+        &:after{ display: none; }
+        &.weui-btn_disabled{
+            background-color: @gray-color;
+            opacity: .6;
+        }
+        &:not(.weui-btn_disabled):active {
+            color: rgba(255, 255, 255, 0.6);
+            background-color: @gray-color;
+        }
+    }
+    .weui-btn_primary{
+        background-color: @main-color;
+        border-color: @main-color;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.33rem;
+        &:after{ display: none; }
+        &.weui-btn_disabled{
+            background-color: #878d99;
+            opacity: .98;
+        }
+        &:not(.weui-btn_disabled):active {
+            color: rgba(255, 255, 255, 0.6);
+            background-color: @main-color;
+        }
+    }
+    .weui-btn_circle{
+        height: 3.8rem !important;
+        float: left;
+        width: 100%;
+        height: 3.3rem;
+        line-height: 3.3rem;
+    }
+    .weui-btn_del{
+        background: @font-color;
+    }
+    .db-button{
+        .weui-btn_circle{
+            width: 50% !important;
+            &+.weui-btn_circle{
+                margin-top: 0;
+            }
+        }
+    }
+    .weui-btn_circle_radius{
+        border-radius: 3rem;
+        width: 70%
+    }
+    .group-cell-right{
+        .weui-input{
+            text-align: right;
+            &:focus {
+                text-align: left;
+            }
+        }
+        .weui-label{
+            width: auto;
+            min-width: 4em;
+        }
+    }
+    .weui-dialog__title{
+        font-size: 1.33rem;
+    }
+    .weui-dialog__bd{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .weui-dialog__ft{
+        font-size: 1.33rem;
+    }
+    /* popickup的确定和取消文字重置 */
+    .dp-container .dp-item,
+    .vux-popup-picker-header{
+        font-size: 1.33rem;
+    }
+    .weui-actionsheet__cell{
+        font-size: 1.167rem;
+        padding: 0; color: #222;
+        line-height: 3.67rem;
+    }
+    .vux-x-switch{
+        .weui-label{
+            width: auto!important;
+            color: #333;
+        }
+    }
+    .weui-switch{
+        zoom: .7;
+        margin-bottom: 1px;
+        &:after{
+            width: 29px;height: 29px;
+        }
+    }
+    .weui-switch:checked, .weui-switch-cp__input:checked ~ .weui-switch-cp__box{
+        background-color: @main-color;
+        border-color: @main-color;
+    }
+}
+
+.formcell{
+    @form-size: 1.167rem;
+    @form-label-size: 1.083rem;
+    .weui-label,
+    .weui-cells{
+        font-size: @form-size;
+    }
+    .weui-cell{
+        padding: 1rem @body-margin;
+        &:before{
+            left: @body-margin;
+        }
+    }
+    .vux-x-switch.weui-cell_switch{
+        padding: 1rem @body-margin;
+    }
+    .weui-cell:before,
+    .vux-cell-box:before{
+        left: .95rem;
+        border-color: #eee;
+    }
+    ::-webkit-input-placeholder {
+      color:#ccc;
+    }
+    .form-group{
+        position: relative;
+        font-size: @form-size;
+        & + .form-group{
+            &:after{
+                .setTopLine(#eee);
+                left: .95rem;
+            }
+        }
+        .borderleft{
+            position: relative;
+            &:after{
+                .setLeftLine(#eee);
+                top: 1rem;
+                bottom: 1rem;
+            }
+        }
+        .w45{
+            box-sizing: border-box;
+            .flex(0 0 45%);
+        }
+    }
+    .weui-cell_access{
+        .vux-cell-primary{
+            color: #222; font-size: @form-size;
+        }
+    }
+    .formlabel,
+    .vux-label,
+    .weui-label,
+    .vux-popup-picker-placeholder,
+    .vux-datetime p{ color: #777; font-size: @form-label-size; white-space: nowrap; }
+    .vux-popup-picker-value,
+    .formtext{ padding-right: 0.8rem; font-size: 1.25rem;color: #222; }
+    .weui-input{ font-size: @form-size;color: #222; }
+}
+
+.graycelllabel{
+    .weui-label,
+    .vux-datetime p{ color: #aaa; }
+}
+
+
+.noborder{
+    .vux-no-group-title:after,
+    .vux-no-group-title:before,
+    .vux-cell-box:before,
+    .weui-cell:before{
+        display: none;
+    }
+}
+.nocellborder{
+    .weui-cell:before{
+        display: none;
+    }
+}
+.nogroupborder{
+    .vux-no-group-title:after,
+    .vux-no-group-title:before{
+        display: none;
+    }
+}
+.smalllabel .vux-label-desc{
+    font-size: 0.85em;margin-top: 6px;
+    display: block;
+}
+.thumb{
+    display: inline-block;
+    overflow: hidden;
+}
+.radius50{ border-radius: 9999px; overflow: hidden; }
+.radius0 { border-radius: 0; }
+.fontimg{
+    width: 30px; height: 30px; line-height: 1;
+    border-radius: 9999px; overflow: hidden;
+    background: #66CCFF;
+    color: #fff; font-style: normal;
+}
+.list-item{
+    width: 25%; box-sizing: border-box;padding: 0.683rem; color: #444;
+    line-height: 1.6em;
+    .thumb{
+        border-radius: 9999px;
+        width: 4.25rem; height: 4.25rem;
+        margin: 0 auto .4rem;
+    }
+    .fontimg{
+        width: 30px; height: 30px;
+        border-radius: 9999px;
+        background: #66CCFF;
+        color: #fff; font-style: normal;
+    }
+    &.disabled{
+        cursor: not-allowed;
+        opacity: .7;
+        color: #aaa!important;
+        .fontimg{
+            background: #aaa!important;
+        }
+    }
+}
+.vux-icon-dot.active{
+    background-color: @main-color!important;
+}
+.xs-plugin-pullup-container{
+    line-height: 40px; color: #666;
+}
+
+
+/* 专家医生库地区、医院、科室、服务过滤弹出层内清除已先条件按钮 */
+// .clearbtn{
+//     background: @error-color;
+//     color: #fff;
+//     border: 0;
+//     padding: 6px 12px;
+//     font-size: 10px;
+//     line-height: 10px;
+//     border-radius: 8px; opacity: .8;
+// }
+.choosetitle{
+    background: #fff;
+    margin: 0;
+    line-height: 42px;
+    padding: 0 15px;
+    color: #444;
+}
+.clearbtn{
+    background: transparent;
+    border: 0;
+    color: @main-color;
+}
+
+/* 表格样式 */
+.table {
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: transparent;
+    width: 100%;
+    max-width: 100%;
+}
+.table-bordered {
+    border: 1px solid #F6F6F6;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+    background-color: #F5F5F6;
+    border-bottom-width: 1px;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border: 1px solid #f6f6f6;
+}
+.table > thead > tr > th {
+    border-bottom: 1px solid #f6f6f6;
+    vertical-align: bottom;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    border-top: 1px solid #f6f6f6;
+    line-height: 1;
+    padding: 8px;
+    vertical-align: top;
+}
+
+
+.list-item-menu{
+    padding: 1.25rem 1rem!important;
+    .weui-cell__hd{
+        position: relative;
+        width: 1.8rem; text-align: center;
+        margin: 0 1.2rem 0 .3rem;
+        img{
+            position: absolute; top: 50%; left: 50%; height: 1.5rem;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        }
+    }
+    .vux-label{
+        line-height: 1.5rem;
+        font-size: 1.16rem !important;
+    }
+}
+
+.remarktoptitle{
+    text-align: center; line-height: 1; padding: 1rem;
+    background: @warn-color-lower;
+    color: #767873;
+    h3{ margin-bottom: .6em; color: #222; font-weight: 500; }
+    button.back{
+        color: #767873;border: 0; background: transparent; padding: 0 .6rem;
+    }
+}
+
+.g_newtip{
+    &:after{
+        content: "";
+        display: inline-block;
+        width: 8px; height: 8px;
+        border-radius: 9999px;
+        background: @error-color;
+    }
+}
+.g_exportdb{
+    display: inline-block; line-height: 0;padding: 8px 5px 6px;
+    background: @main-color; color: #fff; margin-left: 1rem;
+    border-radius: 2px;
+    &:after{
+        content: "";margin-left: 2px;top: -1px !important;
+        .setArrow(right, 4px, #fff, 1px);
+    }
+}
+
+span[class^="RongIMExpression_"]{
+    width: 26px!important;
+    height: 26px!important;
+}
+
+/* animated.css动画库 */
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+// formStyle 适用于项目中表单样式
+.formStyle{
+    overflow: hidden;
+    .weui-cell{
+        margin-left: .625rem;
+        padding: 1.2rem 1rem
+    }
+    .form-group{
+        .vux-cell-box:before{
+            display: none
+        }
+        .vux-x-input{
+            padding: 0 1rem;
+            .weui-label{
+                padding: 1.2rem 0
+            }
+            input{
+                padding: 1.2rem .5rem 1.2rem 0
+            }
+        }
+    }
+    .line{
+        border-top: 0.5px solid #eee;
+        margin-left: 1rem
+    }
+    .button{
+        margin-top: 3.2rem;
+        width: 75%;
+        border-radius: 3rem;
+        height: 3.3rem;
+        line-height: 3.3rem
+    }
+    .weui-cells:before{
+        display: none
+    }
+    .weui-cells:after{
+        display: none
+    }
+    .form-group{
+        position: relative;
+        &:after{
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            border-top: 1px solid #eee;
+            color: #eee;
+            -webkit-transform-origin: 0 0;
+            -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(0.5);
+            -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            left: .95rem;
+        }
+        .vux-cell-box:before{
+            display: none
+        }
+    }
+    input::-webkit-input-placeholder{
+        color: @gray-color-lower;opacity:1;
+    }
+    .noMargin{
+        .weui-cell{
+            margin-left: 0;
+        }
+    }
+    .minWdth{
+        .weui-cell__hd {
+            min-width: 4.5rem !important
+        }
+    }
+}
+// formSub 适用于项目中表单提交样式
+.formSub {
+    // 头部提示
+    .ask-title{
+        display: block;
+        color: #000;
+        background: #f0dba6;
+        padding: 1rem;
+        font-size: 1.1rem;
+        .mark{
+            font-size: 1.25rem;
+            color: @main-color
+        }
+        .title-color{
+            color: @main-color;
+        }
+        i{
+            font-size: 0.85rem;
+        }
+        .go-page{
+            position: relative;
+            padding-right: 1.3rem;
+            &:before{
+                content: '';
+                position: absolute;
+                width: .5rem;
+                height: .5rem;
+                border-right: 1px solid @main-color;
+                border-top: 1px solid @main-color;
+                right: .5rem;
+                top: .5rem;
+                -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                        transform: rotate(45deg)
+
+            }
+        }
+    }
+    .title{
+        padding: 1rem 1rem .7rem!important;
+        .vux-label{
+            color: #000;
+            font-size: 1.6rem
+        }
+        .weui-cell__ft{
+            float: left;
+            text-align: left
+        }
+    }
+    .g_exportdb{
+        vertical-align: middle
+    }
+    .weui-textarea{
+        font-size: 1.167rem
+    }
+}
+//wp start优惠券样式
+
+.couponmain {
+  margin:1.07rem .84rem 0;
+  .item {
+      height: 7.25rem;
+      margin-bottom: .7rem;
+      box-shadow: 4px 4px 5px #ddd;
+  }
+  .teamcolor {
+     background-color:#f6ab00 !important;
+  }
+  .teaminfo {
+      font-size: .76rem;
+      color:#9196a1;
+      margin-top: .36rem;
+          label{
+              display: inline-block;
+              background:url("../../assets/img/indexInfo/limit.png") no-repeat;
+              width: 1rem;
+              height: 1rem;
+              background-size: 100% 100%;
+              vertical-align: text-bottom;
+          }
+  }
+  .margintop {
+      margin-top:-.4rem;
+  }
+  .item-left {
+      width: 8rem;
+      height:inherit;
+      background-color: #ff2a39;
+      text-align:center;
+      float: left;
+      border-radius:.2rem;
+      &:before {
+          content:'';
+          position:absolute;
+          width:0;
+          height:5.89rem;
+          border:0.5px dashed #fff;
+          top:.4rem;
+          right:0;
+      }
+      .moneytotal {
+          margin: 0 0 .5rem 0;
+          i{
+            font-size:1.346rem;
+            font-style:normal;
+          }
+      }
+      .fullprice {
+          color:#fffefe;
+      }
+      .money {
+          font-size: 3rem;
+          font-weight: 500;
+          color:#fffefe;
+          &.multnum{
+              zoom: .75;
+          }
+      }
+  }
+  .spottop,.spotbottom {
+      position: absolute;
+      height: 5.2px;
+      width: 10.4px;
+      background:#eee;
+      z-index: 10;
+      right:-5.2px;
+  }
+  .spottop {
+      top:0;
+      border-radius: 0 0 5.2px 5.2px;
+  }
+  .spotbottom {
+      background: #ddd;
+      border-radius: 5.2px 5.2px 0 0;
+      bottom: 0;
+  }
+  .used-color {
+      background-color:#9196a1;
+  }
+  .coloruse {
+      color:#fffefe;
+  }
+  .colorused {
+      color: #d8d9dc;
+  }
+  .item-right {
+      overflow: hidden;
+      height:inherit;;
+      background-color: #fff;
+      padding: 1rem 1rem .5rem 1.18rem;
+      border-radius:.2rem;
+      .imuse {
+          font-size:1.03rem;
+          padding: .2rem .8rem;
+          background:#ff2a39;
+          border-radius:1rem;
+          right: .5rem;
+          bottom: .5rem;
+      }
+      .used {
+        font-size:1.23rem;
+        color:#9196a1;
+        position:absolute;
+        right: .7rem;
+        bottom: .7rem;
+      }
+      .time {
+        margin-top: .7rem;
+        font-size:.76rem;
+        color:#9196a1;
+      }
+  }
+}
+//wp end 优惠券样式
+
+
+.form_000_ccc {
+    .vux-datetime p,
+    .weui-label{
+        color: #000;
+        font-size: 1.083rem;
+    }
+    .vux-datetime-value .vux-cell-value,
+    .vux-popup-picker-value,
+    .weui-textarea,
+    .weui-input{
+        color: #777;
+        font-size: 1.167rem;
+    }
+    .vux-x-input .vux-input-icon,
+    .weui-cell__ft .weui-icon::before{
+        font-size: 18px;
+    }
+}
+
+.form_input_right{
+    .vux-datetime-value .vux-cell-value,
+    .vux-popup-picker-value,
+    .weui-textarea,
+    .weui-input{
+        text-align: right;
+        &:focus{
+            text-align: left;
+        }
+    }
+}
+//红星样式
+.red-star {
+    position:absolute;
+    top: 1.5rem;
+    left: 1rem;
+    color: red;
+}
+.red-star-left {
+  left:.5rem;
+}

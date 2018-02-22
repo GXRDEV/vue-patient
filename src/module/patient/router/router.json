@@ -1,0 +1,688 @@
+[{
+    "path": "/",
+    "redirect": "/main/ask"
+  },
+  {
+    "path": "/main",
+    "name": "main",
+    "component": "../../components/patient/index/Index",
+    "children": [{
+        "describe": "寻医问诊",
+        "path": "ask",
+        "name": "ask",
+        "component": "../../components/patient/index/IndexAsk",
+        "meta": {
+          "ignoreAuth": true
+        }
+      },
+      {
+        "describe": "消息中心",
+        "path": "message",
+        "name": "mymessage",
+        "component": "../../components/patient/index/Message"
+      },
+      {
+        "describe": "我的医生，关注，签约",
+        "path": "my",
+        "name": "my",
+        "component": "../../components/patient/index/IndexMy",
+        "children": [{
+            "path": "",
+            "redirect": "mydoc"
+          },
+          {
+            "describe": "我的医生",
+            "path": "mydoc",
+            "name": "mydoc",
+            "component": "../../components/patient/index/Mydoc"
+          },
+          {
+            "describe": "我的关注",
+            "path": "follow",
+            "name": "myfollow",
+            "component": "../../components/patient/index/MyFollow"
+          },
+          {
+            "describe": "我的签约",
+            "path": "mysign",
+            "name": "mysign",
+            "component": "../../components/patient/index/MySign"
+          }
+        ]
+      },
+      {
+        "describe": "健康管理",
+        "path": "family",
+        "component": "../../components/patient/family/Family"
+      },
+      {
+        "describe": "个人中心",
+        "path": "info",
+        "name": "info",
+        "component": "../../components/patient/index/IndexInfo"
+      }
+    ]
+  },
+  {
+    "describe": "添加修改病历图片",
+    "path": "/enclosure",
+    "component": "../../components/patient/Interrogation/Enclosure",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "快速问诊等待接单",
+    "path": "/fastfind/:id",
+    "component": "../../components/patient/fast/FastFind",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "新建就诊人",
+    "path": "/familyadd",
+    "component": "../../components/patient/family/FamilyEdit",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "编辑就诊人",
+    "path": "/familyedit/:id",
+    "component": "../../components/patient/family/FamilyEdit",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "团队主页",
+    "name": "teaminfo",
+    "path": "/teaminfo/:id",
+    "component": "../../components/patient/team/TeamInfo"
+  },
+  {
+    "describe": "团队问诊会诊申请选择首诊医生",
+    "path": "/teamlist/:id/:type",
+    "component": "../../components/patient/team/TeamList"
+  },
+  {
+    "describe": "我的问诊",
+    "path": "/inquirylist/:id",
+    "component": "../../components/patient/orders/InquiryList"
+  },
+  {
+    "describe": "我的订单",
+    "path": "/orderlist/:id",
+    "component": "../../components/patient/orders/OrderList"
+  },
+  {
+    "describe": "订单详情",
+    "path": "/orderdetail/:uuid",
+    "component": "../../components/patient/orders/OrderDetail"
+  },
+  {
+    "describe": "评价医生页面",
+    "path": "/evaluate",
+    "component": "../../components/patient/orders/Evaluate",
+    "meta": {
+      "needBind": true
+    }
+  },
+
+  {
+    "describe": "交易记录",
+    "path": "/record",
+    "component": "../../components/patient/orders/Record"
+  },
+
+  {
+    "describe": "视频会诊详情",
+    "path": "/details",
+    "component": "../../components/patient/orders/Details",
+    "meta": {
+      "needBind": true
+    }
+  },
+
+  {
+    "describe": "专家会诊报告",
+    "path": "/opinion/:id/:type",
+    "component": "../../components/patient/orders/Opinion",
+    "meta": {
+      "needBind": true
+    }
+  },
+
+  {
+    "describe": "个人中心-完善个人资料",
+    "path": "/completeinfo/:timer",
+    "component": "../../components/patient/setUp/CompleteInfo",
+    "meta": {
+      "needBind": true
+    }
+  },
+
+  {
+    "describe": "邀请好友",
+    "path": "/invitefriend",
+    "component": "../../components/patient/setUp/InviteFriends"
+  },
+
+  {
+    "describe": "消息-订单消息",
+    "path": "/orderinfolist",
+    "component": "../../components/patient/index/OrderInfoList"
+  },
+
+  {
+    "describe": "消息-系统消息",
+    "path": "/systeminfolist",
+    "component": "../../components/patient/index/SystemInfoList"
+  },
+  {
+    "describe": "医生团队VIP服务",
+    "path": "/teamserver",
+    "component": "../../components/patient/vipserver/TeamServer"
+  },
+  {
+    "describe": "私人医生服务",
+    "path": "/privatedocserver",
+    "component": "../../components/patient/vipserver/PrivateDocServer"
+  },
+  {
+    "describe": "关于我们",
+    "path": "/aboutMe",
+    "component": "../../components/patient/setUp/AboutMe",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "我的评价",
+    "path": "/myevaluate",
+    "component": "../../components/patient/setUp/MyEvaluate"
+  },
+  {
+    "describe": "我的优惠券",
+    "path": "/mycoupons",
+    "component": "../../components/patient/setUp/MyCoupons"
+  },
+  {
+    "describe": "帮助与反馈",
+    "path": "/feedback",
+    "component": "../../components/patient/setUp/Feedback"
+  },
+  {
+    "describe": "线下活动-红包领取",
+    "path": "/randommoney/:uuid",
+    "component": "../../components/patient/activity/RandomMoney"
+  },
+  {
+    "describe": "联系客服",
+    "path": "/contact",
+    "component": "../../components/patient/setUp/Contact",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "问诊攻略",
+    "path": "/intro",
+    "component": "../../components/patient/setUp/Intro",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "功能介绍",
+    "path": "/funintro",
+    "component": "../../components/patient/setUp/FunIntro",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "问诊攻略-单个服务介绍",
+    "path": "/introdetail/:id",
+    "component": "../../components/patient/setUp/IntroDetail",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "我送出的心意",
+    "path": "/mysendminds",
+    "component": "../../components/patient/setUp/MySendMinds"
+  },
+
+  {
+    "describe": "设置",
+    "path": "/password",
+    "component": "../../components/patient/passwords/Password"
+  },
+  {
+    "describe": "设置-修改密码",
+    "path": "/changepass",
+    "component": "../../components/patient/passwords/Changepass",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "设置-绑定订单",
+    "path": "/bindorder",
+    "component": "../../components/patient/passwords/BindOrder",
+    "meta": {
+      "needBind": true
+    }
+  },
+
+  {
+    "describe": "电话问诊、图文问诊、快速问诊、会诊申请、团队问诊",
+    "path": "/interrogation/:timer",
+    "component": "../../components/patient/Interrogation/Interrogation",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "专家-视频会诊、图文会诊",
+    "path": "/inquiry",
+    "component": "../../components/patient/Interrogation/ExpertInquiry"
+  },
+
+  {
+    "describe": "订单详情-聊天界面（图文、电话、报到、签约、团队问诊）",
+    "path": "/chat",
+    "component": "../../components/patient/orders/Chat",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "订单详情-完善、查看病历",
+    "path": "/supply/:timer",
+    "component": "../../components/patient/family/Supply",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "GPS定位",
+    "path": "/gps",
+    "component": "../../components/patient/GPS",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "搜索医生、专家、团队",
+    "path": "/search",
+    "component": "../../components/patient/Search",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "搜索结果-医生、专家",
+    "path": "/result",
+    "name": "result",
+    "component": "../../components/patient/aboutdoc/Results",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "搜索结果-团队",
+    "path": "/teamresult",
+    "name": "teamresult",
+    "component": "../../components/patient/team/TeamResults",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "送心意给医生",
+    "path": "/give",
+    "component": "../../components/patient/aboutdoc/Give",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "心意墙",
+    "path": "/warmwall",
+    "component": "../../components/patient/aboutdoc/WarmWall"
+  },
+  {
+    "describe": "购买服务详情",
+    "path": "/buyservice/:id",
+    "component": "../../components/patient/aboutdoc/BuyService"
+  },
+  {
+    "describe": "团队报到",
+    "path": "/report/:id/:uuid/:timer",
+    "component": "../../components/patient/Interrogation/Report",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "医生报到",
+    "path": "/report/:id/:timer",
+    "component": "../../components/patient/Interrogation/Report",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "会诊案例、健康资讯",
+    "path": "/healths/:type",
+    "component": "../../components/patient/index/Healths",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "报到、选择医生所在团队",
+    "path": "/selectteam/:id",
+    "component": "../../components/patient/team/SelectTeam",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "医生专家详情页",
+    "name": "docinfo",
+    "path": "/docinfo/:id",
+    "alias": "/expinfo/:id",
+    "component": "../../components/patient/aboutdoc/DocInfo"
+  },
+  {
+    "describe": "医生专家详情页-医生公告详情",
+    "path": "/doctotifys",
+    "component": "../../components/patient/aboutdoc/DocTotifys",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "医生专家详情页-医生个人信息",
+    "path": "/docdetail/:id",
+    "component": "../../components/patient/aboutdoc/DocDetail",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "医生专家详情页-医生名片",
+    "path": "/doccard/:id",
+    "component": "../../components/patient/aboutdoc/DocCard",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "团队名片",
+    "path": "/teamcard/:id",
+    "component": "../../components/patient/team/TeamCard",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "app内嵌-邀请医生",
+    "path": "/invitedoc/:id",
+    "component": "../../components/patient/sharepage/InviteDoc",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "app内嵌-邀请医生-分享链接",
+    "path": "/sharepage/:id",
+    "component": "../../components/patient/sharepage/SharePage",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "邀请好友-分享链接",
+    "path": "/patientshare",
+    "component": "../../components/patient/sharepage/PatientShare",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "医生团队-更多评价",
+    "path": "/appraise/:type/:id",
+    "component": "../../components/patient/aboutdoc/Appraise",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "团队库",
+    "path": "/libs/team/:pid",
+    "name": "team",
+    "component": "../../components/patient/team/LibsTeam",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "医生库",
+    "path": "/libs/docs/:pid",
+    "name": "docs",
+    "component": "../../components/patient/aboutdoc/LibsDoc",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "医生专家库",
+    "path": "/libs/:type/:pid",
+    "name": "libs",
+    "component": "../../components/patient/aboutdoc/Libs.vue",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "找医生",
+    "path": "/finddoc",
+    "name": "finddoc",
+    "component": "../../components/patient/aboutdoc/FindDoc.vue"
+  },
+  {
+    "describe": "表单-导入病历",
+    "path": "/import/:familyId",
+    "name": "import",
+    "component": "../../components/patient/Interrogation/Import.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "表单-导入病历-病历详情",
+    "path": "/importDetails/:ind",
+    "name": "importDetails",
+    "component": "../../components/patient/Interrogation/ImportDetails.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "关注公号",
+    "path": "/watch",
+    "component": "../../components/patient/user/Watch.vue",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "授权获取个人信息",
+    "path": "/auth2",
+    "component": "../../components/patient/user/Auth2.vue",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "绑定手机号",
+    "path": "/bind",
+    "component": "../../components/patient/user/Bind.vue"
+  },
+  {
+    "describe": "完善个人信息-绑定时",
+    "path": "/perfect",
+    "component": "../../components/patient/user/Perfect.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "完善个人感兴趣-绑定时",
+    "path": "/interest",
+    "component": "../../components/patient/user/Interest.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "添加就诊记录-健康管理",
+    "path": "/visitingRecord/:timer",
+    "component": "../../components/patient/user/VisitingRecord.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "完善个人感兴趣科室",
+    "path": "/selectdep",
+    "component": "../../components/patient/user/SelectDep.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "完善个人感兴趣疾病",
+    "path": "/selectease",
+    "component": "../../components/patient/user/SelectEase.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "公共支付界面",
+    "path": "/pay",
+    "component": "../../components/patient/pay.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "签约步骤一进入私人医生、vip团队下单",
+    "path": "/vip/:id/:type",
+    "component": "../../components/patient/vipserver/VIP.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "签约步骤二请选择一位联系人进行签约",
+    "path": "/choicefamily",
+    "component": "../../components/patient/vipserver/choiceFamily.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "签约医生、团队服务说明",
+    "path": "/serverdes",
+    "component": "../../components/patient/vipserver/ServerDes.vue",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "describe": "运营人员工具-视频会诊下单1",
+    "path": "/remote",
+    "component": "../../components/patient/remote/Remote.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "运营人员工具-备注说明",
+    "path": "/remark",
+    "component": "../../components/patient/remote/Remark.vue"
+  },
+  {
+    "describe": "运营人员工具-专家库",
+    "path": "/explibs",
+    "component": "../../components/patient/remote/ExpLibs.vue"
+  },
+  {
+    "describe": "运营人员工具-专家详情",
+    "path": "/expdetail",
+    "component": "../../components/patient/remote/ExpDetail.vue"
+  },
+  {
+    "describe": "运营人员工具-视频会诊下单2",
+    "path": "/userdetail",
+    "component": "../../components/patient/remote/UserDetail.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "运营人员工具-图文电话下单",
+    "path": "/expreport",
+    "component": "../../components/patient/remote/ExpReport.vue",
+    "meta": {
+      "needBind": true
+    }
+  },
+  {
+    "describe": "药品详情页",
+    "path": "/drugdetail/:id",
+    "component": "../../components/patient/drugs/DrugDetail.vue"
+  },
+  {
+    "describe": "药品首页",
+    "path": "/drugs",
+    "component": "../../components/patient/drugs/Drugs"
+  },
+  {
+    "describe": "药品筛选页",
+    "path": "/drugfilter",
+    "name": "drugfilter",
+    "component": "../../components/patient/drugs/DrugFilter"
+  },
+  {
+    "describe": "药品列表页",
+    "path": "/druglist",
+    "component": "../../components/patient/drugs/DrugList"
+  },{
+    "describe": "购物车页面",
+    "path": "/shopcart",
+    "component": "../../components/patient/drugs/ShopCart.vue"
+  },
+  {
+    "path": "/404",
+    "component": "../../components/App.vue",
+    "meta": {
+      "ignoreAuth": true
+    }
+  },
+  {
+    "path": "*",
+    "component": "../../components/App.vue",
+    "meta": {
+      "ignoreAuth": true
+    }
+  }
+]

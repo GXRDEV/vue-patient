@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>邀请同行</title>
+    <style>
+        body,html,h3,div,p{ padding:0;margin:0; }
+        body,html { width:100%;height:100%;}
+        .container{
+            background-image: url("../appimg/app-invite-bg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            min-height: 100%;
+        }
+        img { width:100%;}
+        .invite-btn{
+            display:block;
+            width: 74%;
+            background-image: url("../appimg/app-invite-btn.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0 13%;
+            margin-top:-14%;
+            position:absolute;
+            z-index: 10;
+        }
+        .invite-btn::after { content:"";  display:block;  padding:25.8%; }
+        .content { padding:0 1rem 1rem; color: #fff; margin-top:28%;}
+        .item { margin-bottom:1.9rem;}
+        .item p { font-family: Helvetica; letter-spacing: 2px;}
+        .title { font-size:1.23rem; margin-bottom: 1.2rem; font-weight:normal; font-family: SimHei;}
+        p { line-height:1.5; margin-bottom:.5rem; }
+        .invite { font-size: 0.92rem;}
+        .invite p { font-family: SimHei;}
+        .invite img { width:1.15rem; vertical-align: top;}
+    </style>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="../appimg/app-banner.png">
+        <a class="invite-btn"></a>
+        <div class="content">
+            <div class="item">
+                <h3 class="title">一、参与方式</h3>
+                <p style="margin-bottom:1.15rem;">1. 通过好友邀请，下载或打开“佰医汇”APP，在注册页面填写邀请人提供的邀请码并完成注册，邀请者和受邀者将各获得10元现金红包。</p>
+                <p>2. 完成注册后需要及时进行执业认证，认证通过后可在账户内完成金额提现。</p>
+            </div>
+            <div class="invite">
+                <h3 class="title">二、邀请流程</h3>
+                <p>01. 打开“佰医汇”APP <img src="../appimg/app-arrow.png"> 02. 选择“我的”，进入个人中心</p>
+                <p>03. 选择“邀请同行” <img src="../appimg/app-arrow.png"> 04. 点击屏幕右上角来分享您的邀请</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

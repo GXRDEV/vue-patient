@@ -1,0 +1,40 @@
+@import "../var";
+.sctionblock {
+    overflow-x: scroll;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    box-sizing: border-box;
+    .list-item {
+        display: inline-block;
+        width: 13.5rem;
+        padding: 0 0 1.25rem;
+        .itemlink {
+            display: block;
+            color: #222;
+            height: 5.04rem;
+            box-sizing: border-box;
+            border: 1px solid @main-bg-color;
+            border-radius: 3px;
+            margin: 0 .2rem 0 .2rem;
+            padding: 0.9rem 0.6rem 0;
+        }
+        .sign {
+            top: 0;
+            right: 1.3em;
+            border-radius: 4px;
+            line-height: 1;
+            background: @warn-color;
+            color: #fff;
+            padding: 3px 8px;
+        }
+        .thumb {
+            width: 3.45rem;
+            height: 3.45rem;
+            margin: 0 0.6rem .4rem 0;
+        }
+        .hasimg {
+            float: left;
+            line-height: 2.5rem;
+        }
+    }
+}
